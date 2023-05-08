@@ -5,20 +5,10 @@ local on_attach = function(_, bufnr, _)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', '<leader>K', '<cmd>Telescope lsp_document_symbols<cr>', bufopts)
-  vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', '<space>f', function()
-    vim.lsp.buf.format { async = true }
-  end, bufopts)
-
-  --  format on save
-  vim.api.nvim_create_autocmd('BufWritePre', {
-    group = vim.api.nvim_create_augroup('LspFormatting', { clear = true }),
-    buffer = bufnr,
-    callback = function()
-      vim.lsp.buf.format()
-    end
-  })
+  vim.keymap.set('n', '<leader>ef', ':EslintFixAll<CR>')
+  vim.keymap.set('n', '<leader>af', function() vim.lsp.buf.format() end)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -30,13 +20,6 @@ local lsp_config = {
     on_attach(_, bufnr)
   end
 }
-
---require("lspconfig").tsserver.setup({
---capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
---on_attach = function(client)
---client.resolved_capabilities.document_formatting = false
---end,
---})
 
 require('mason-lspconfig').setup_handlers({
   function(server_name)

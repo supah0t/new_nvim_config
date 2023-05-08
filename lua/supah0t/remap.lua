@@ -69,4 +69,13 @@ key.set('n', '<leader>-', ':vertical resize -10<cr>', { noremap = true })
 
 -- undotree
 key.set('n', '<leader>ut', vim.cmd.UndotreeToggle)
+
+-- vimwiki
 key.set({ 'n', 'v' }, '<C-SPACE>', '<Plug>VimwikiToggleListItem')
+
+-- move lines
+key.set('v', '}', ":m '>+1<CR>gv=gv", { noremap = true })
+key.set('v', '{', ":m '<-2<CR>gv=gv", { noremap = true })
+
+-- blamer toggle
+key.set('n', '<leader>bt', ':BlamerToggle<CR>')

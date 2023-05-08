@@ -34,8 +34,9 @@ opt.clipboard:append('unnamedplus')
 opt.termguicolors = true
 opt.wildmode = "longest,list:longest,full"
 
-local updatedFormat = opt.formatoptions - { 'c', 'r', 'o' }
-opt.formatoptions = updatedFormat
+--doesn't work properly here
+--local updatedFormat = opt.formatoptions - { 'c', 'r', 'o' }
+--opt.formatoptions = updatedFormat
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "CursorHold" }, {
   buffer = vim.nvim_get_current_buf,

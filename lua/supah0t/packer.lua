@@ -57,4 +57,12 @@ return require('packer').startup(function(use)
   use 'mbbill/undotree'
 
   -- lazygit
+  use 'kdheepak/lazygit.nvim'
+
+  -- git blamer
+  use 'APZelos/blamer.nvim'
+
+  -- fugitive
+  --use 'tpope/vim-fugitive'
+
 end)
