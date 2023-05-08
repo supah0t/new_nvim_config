@@ -79,3 +79,6 @@ key.set('v', '{', ":m '<-2<CR>gv=gv", { noremap = true })
 
 -- blamer toggle
 key.set('n', '<leader>bt', ':BlamerToggle<CR>')
+
+-- lazygit
+key.set('n', '<leader>lg', ':LazyGit<CR>')
