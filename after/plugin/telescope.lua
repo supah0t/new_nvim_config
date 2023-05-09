@@ -32,7 +32,7 @@ local mm = {
     local multi = picker:get_multi_selection()
     actions.select_default(pb) -- the normal enter behaviour
     for _, j in pairs(multi) do
-      if j.path ~= nil then -- is it a file -> open it as well:
+      if j.path ~= nil then    -- is it a file -> open it as well:
         vim.cmd(string.format("%s %s", "edit", j.path))
       end
     end
@@ -50,12 +50,9 @@ require('telescope').setup {
       n = {
         ["C-m"] = mm
       }
+    },
+    layout_config = {
+      horizontal = { preview_width = 0.60 }
     }
   },
-  layout_config = {
-    horizontal = {
-      preview_cutoff = 100,
-      preview_width = 0.6
-    }
-  }
 }

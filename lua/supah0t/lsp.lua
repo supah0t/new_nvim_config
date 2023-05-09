@@ -8,7 +8,7 @@ local on_attach = function(_, bufnr, _)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', '<leader>ef', ':EslintFixAll<CR>')
-  vim.keymap.set('n', '<leader>af', function() vim.lsp.buf.format() end)
+  vim.keymap.set('n', '<leader>af', function() vim.lsp.buf.format { timeout = 20000 } end)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
