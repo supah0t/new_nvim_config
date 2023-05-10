@@ -45,10 +45,10 @@ key.set('n', '<leader><right>', ':tabn<cr>', { noremap = true })
 key.set('n', '<leader><S-Left>', ':-tabm<cr>', { noremap = true })
 key.set('n', '<leader><S-Right>', ':+tabm<cr>', { noremap = true })
 
-key.set('n', '<leader>o', ':e <C-R>=expand("%:p:h") . "/" <CR>', { noremap = true })
+key.set('n', '<leader>eo', ':e <C-R>=expand("%:p:h") . "/" <CR>', { noremap = true })
 key.set('n', '<leader>et', ':tabe <C-R>=expand("%:p:h") . "/" <CR>')
-key.set('n', '<leader>vs', ':vsplit <C-R>=expand("%:p:h") . "/" <CR>')
-key.set('n', '<leader>s', ':split <C-R>=expand("%:p:h") . "/" <CR>')
+key.set('n', '<leader>ev', ':vsplit <C-R>=expand("%:p:h") . "/" <CR>')
+key.set('n', '<leader>es', ':split <C-R>=expand("%:p:h") . "/" <CR>')
 
 key.set({ 'n', 'v' }, 'j', 'gj')
 key.set({ 'n', 'v' }, 'k', 'gk')
