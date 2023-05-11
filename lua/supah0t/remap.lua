@@ -82,3 +82,29 @@ key.set('n', '<leader>bt', ':BlamerToggle<CR>')
 
 -- lazygit
 key.set('n', '<leader>lg', ':LazyGit<CR>')
+
+-- fugitive
+key.set('n', '<leader>gd', ':Gdiff<CR>')
+
+-- copy current file to clipboard
+key.set('n', '<leader>cf', ':redir @* | echo @% | redir END<CR>')
+
+-- trouble
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+  {silent = true, noremap = true}
+)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+  {silent = true, noremap = true}
+)

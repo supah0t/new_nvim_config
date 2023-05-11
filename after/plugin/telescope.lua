@@ -40,10 +40,10 @@ vim.keymap.set('n', '<C-f>', function()
 end)
 vim.keymap.set('n', '<leader>fs', builtin.git_status, { noremap = true })
 
-vim.keymap.set({ 'n', 'v' }, '<leader>gs', function()
+vim.keymap.set({ 'n', 'v' }, '<leader>fc', function()
   builtin.grep_string();
 end)
-vim.keymap.set('n', '<leader>gl', telescope.extensions.live_grep_args.live_grep_args, { noremap = true })
+vim.keymap.set('n', '<leader>fl', telescope.extensions.live_grep_args.live_grep_args, { noremap = true })
 
 require('nvim-web-devicons').setup({
   override = {},

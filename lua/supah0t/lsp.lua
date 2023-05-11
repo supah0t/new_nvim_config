@@ -1,6 +1,9 @@
+local builtin = require('telescope.builtin')
+
 local on_attach = function(_, bufnr, _)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
-  vim.keymap.set('n', 'gd', '<cmd>Telescope lsp_definitions<cr>', bufopts)
+  vim.keymap.set('n', 'gdv', function() builtin.lsp_definitions { jump_type = 'vsplit' } end, bufopts)
+  vim.keymap.set('n', 'gdt', function() builtin.lsp_definitions { jump_type = 'tab' } end, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, bufopts)

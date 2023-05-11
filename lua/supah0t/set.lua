@@ -42,3 +42,5 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "CursorHold" }, {
   buffer = vim.nvim_get_current_buf,
   command = "checktime",
 })
+
+vim.g.blamer_template = '<commit-short> - <committer-time> - <author>'

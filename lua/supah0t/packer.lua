@@ -69,4 +69,9 @@ return require('packer').startup(function(use)
 
   -- fugitive
   use 'tpope/vim-fugitive'
+
+  -- trouble
+  -- Lua
+use 'folke/trouble.nvim'
+
 end)

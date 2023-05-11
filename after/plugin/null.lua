@@ -8,5 +8,6 @@ null_ls.setup({
     builtins.code_actions.eslint,
     builtins.diagnostics.eslint,
     builtins.diagnostics.stylelint,
+    null_ls.builtins.diagnostics.tsc
   },
 })
