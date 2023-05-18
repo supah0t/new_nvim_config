@@ -1,5 +1,6 @@
 local builtin = require('telescope.builtin')
 
+
 local on_attach = function(_, bufnr, _)
   local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gdv', function() builtin.lsp_definitions { jump_type = 'vsplit' } end, bufopts)
@@ -12,6 +13,24 @@ local on_attach = function(_, bufnr, _)
   vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', '<leader>ef', ':EslintFixAll<CR>')
   vim.keymap.set('n', '<leader>af', function() vim.lsp.buf.format { timeout = 20000 } end)
+
+  vim.g.showDiagnostics = true
+
+  local diagnostics_active = true
+  local toggle_diagnostics = function()
+    diagnostics_active = not diagnostics_active
+    if diagnostics_active then
+      vim.diagnostic.show()
+      vim.g.showDiagnostics = true
+      print('diagnostics: show')
+    else
+      vim.diagnostic.hide()
+      vim.g.showDiagnostics = false
+      print('diagnostics: hide')
+    end
+  end
+
+  vim.keymap.set('n', '<leader>dt', toggle_diagnostics)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()

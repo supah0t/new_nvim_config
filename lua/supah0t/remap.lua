@@ -9,7 +9,7 @@ key.set({ 'n', 'v' }, 'K', '{', { noremap = true })
 key.set({ 'n', 'v' }, 'J', '}', { noremap = true })
 key.set("n", "L", "$", { noremap = true })
 key.set("n", "H", "^", { noremap = true })
-key.set("n", "<leader>l", ":join<cr>", { noremap = true, silent = true })
+key.set("n", "<leader>ll", ":join<cr>", { noremap = true, silent = true })
 
 key.set('n', '<leader>z', '<C-w>r<cr>', { noremap = true })
 -- not much point with lua setup

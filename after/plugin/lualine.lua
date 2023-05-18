@@ -1,3 +1,11 @@
+local showDiagnosticsTest = function ()
+  if vim.g.showDiagnostics == nil or vim.g.showDiagnostics == false then
+    return ''
+  else
+    return 'diagnostics'
+  end
+end
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -21,7 +29,7 @@ require('lualine').setup {
     lualine_a = { 'mode' },
     lualine_b = { 'branch', 'diff', 'filename' },
     lualine_c = { 'diagnostics' },
-    lualine_x = { '' },
+    lualine_x = { showDiagnosticsTest },
     lualine_y = { 'progress' },
     lualine_z = { 'location', 'filetype' }
   },
@@ -36,5 +44,5 @@ require('lualine').setup {
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = {}
+  extensions = {'nerdtree'}
 }
