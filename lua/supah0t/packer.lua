@@ -71,7 +71,8 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
 
   -- trouble
-  -- Lua
-use 'folke/trouble.nvim'
+  use 'folke/trouble.nvim'
 
+  -- harppoon
+  use 'ThePrimeagen/harpoon'
 end)
