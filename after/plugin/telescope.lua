@@ -80,6 +80,7 @@ require('telescope').setup {
     },
     layout_config = {
       horizontal = { preview_width = 0.60 }
-    }
+    },
+    dynamic_preview_title = true
   },
 }

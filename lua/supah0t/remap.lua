@@ -1,6 +1,4 @@
 local key = vim.keymap
-local harpoon = require('harpoon.ui')
-local mark = require('harpoon.mark')
 
 -- general life improvements
 vim.g.mapleader = " "
@@ -60,7 +58,7 @@ vim.api.nvim_create_user_command('FTermToggle', require('FTerm').toggle, { bang 
 key.set('n', '<leader>\'', ':FTermToggle<cr>')
 
 -- diagnostics
-key.set('n', '<leader>e', vim.diagnostic.open_float)
+key.set('n', '<leader>ee', vim.diagnostic.open_float)
 key.set('n', '[d', vim.diagnostic.goto_prev)
 key.set('n', ']d', vim.diagnostic.goto_next)
 key.set('n', '<leader>q', vim.diagnostic.setloclist)
@@ -90,9 +88,11 @@ key.set('n', '<leader>gd', ':Gdiff<CR>')
 
 -- copy current file to clipboard
 key.set('n', '<leader>cf', ':redir @* | echo @% | redir END<CR>')
+
 -- eslint --fix current file
 key.set('n', '<leader>ec', '!tmux new -d "eslint --fix %"', { noremap = true })
-vim.api.nvim_create_user_command('Format', '!tmux new -d "eslint --fix %"', {})
+vim.api.nvim_create_user_command('Formatd', '!tmux new -d "eslint --fix %"', {})
+vim.api.nvim_create_user_command('Format', '!eslint --fix %', {})
 
 -- trouble
 key.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
