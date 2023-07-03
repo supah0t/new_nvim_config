@@ -44,3 +44,5 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "CursorHold" }, {
 })
 
 vim.g.blamer_template = '<commit-short> - <committer-time> - <author>'
+
+vim.g.NERDSpaceDelims = 1
