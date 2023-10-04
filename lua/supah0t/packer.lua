@@ -69,6 +69,8 @@ return require('packer').startup(function(use)
 
   -- fugitive
   use 'tpope/vim-fugitive'
+  -- gv, requires fugitive
+  use 'junegunn/gv.vim'
 
   -- trouble
   use 'folke/trouble.nvim'
