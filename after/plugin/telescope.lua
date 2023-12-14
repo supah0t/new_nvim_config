@@ -35,6 +35,7 @@ end
 vim.keymap.set('n', '<leader>ff', Actual_find_files, {})
 vim.keymap.set('n', '<leader>fg', My_find_gitfiles, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true })
+vim.keymap.set('n', '<leader>fd', builtin.git_bcommits	, { noremap = true })
 vim.keymap.set('n', '<C-f>', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
@@ -43,7 +44,7 @@ vim.keymap.set('n', '<leader>fs', builtin.git_status, { noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<leader>fc', function()
   builtin.grep_string();
 end)
-vim.keymap.set('n', '<leader>fl', telescope.extensions.live_grep_args.live_grep_args, { noremap = true })
+vim.keymap.set('n', 'v', '<leader>fl', telescope.extensions.live_grep_args.live_grep_args, { noremap = true })
 
 require('nvim-web-devicons').setup({
   override = {},
