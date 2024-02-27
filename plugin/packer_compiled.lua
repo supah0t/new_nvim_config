@@ -84,6 +84,12 @@ _G.packer_plugins = {
     path = "/Users/odysseas.mastorakis/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["advanced-git-search.nvim"] = {
+    config = { "\27LJ\2\n—\1\0\0\5\0\b\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0005\3\3\0004\4\0\0=\4\4\3=\3\6\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\a\0'\2\4\0B\0\2\1K\0\1\0\19load_extension\15extensions\1\0\0\24advanced_git_search\1\0\0\nsetup\14telescope\frequire\0" },
+    loaded = true,
+    path = "/Users/odysseas.mastorakis/.local/share/nvim/site/pack/packer/start/advanced-git-search.nvim",
+    url = "https://github.com/aaronhallaert/advanced-git-search.nvim"
+  },
   ["blamer.nvim"] = {
     loaded = true,
     path = "/Users/odysseas.mastorakis/.local/share/nvim/site/pack/packer/start/blamer.nvim",
@@ -285,10 +291,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: kanagawa
-time([[Config for kanagawa]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
-time([[Config for kanagawa]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
@@ -297,6 +299,14 @@ time([[Config for nvim-autopairs]], false)
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\2\nS\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\19live_grep_args\19load_extension\14telescope\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
+-- Config for: advanced-git-search.nvim
+time([[Config for advanced-git-search.nvim]], true)
+try_loadstring("\27LJ\2\n—\1\0\0\5\0\b\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\5\0005\3\3\0004\4\0\0=\4\4\3=\3\6\2B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\a\0'\2\4\0B\0\2\1K\0\1\0\19load_extension\15extensions\1\0\0\24advanced_git_search\1\0\0\nsetup\14telescope\frequire\0", "config", "advanced-git-search.nvim")
+time([[Config for advanced-git-search.nvim]], false)
+-- Config for: kanagawa
+time([[Config for kanagawa]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
+time([[Config for kanagawa]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

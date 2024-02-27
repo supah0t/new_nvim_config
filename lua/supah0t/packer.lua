@@ -77,4 +77,15 @@ return require('packer').startup(function(use)
 
   -- harppoon
   use 'ThePrimeagen/harpoon'
+
+  use({
+      "aaronhallaert/advanced-git-search.nvim",
+      config = function()
+          require("telescope").load_extension("advanced_git_search")
+      end,
+      requires = {
+          -- Insert Dependencies here
+      },
+  })
+  use 'tpope/vim-rhubarb'
 end)

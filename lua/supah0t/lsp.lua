@@ -85,9 +85,20 @@ require('mason-lspconfig').setup_handlers({
         }
       })
     })
-  end
+  end,
+  ["cssls"] = function ()
+        require("lspconfig").cssls.setup(vim.tbl_deep_extend('force', lsp_config, {
+            capabilities = {
+                textDocument = {
+                    completion= {
+                        completionItem = { snippetSupport = true }
+                    }
+                }
+            },
+        }))
+    end,
 })
 
 --vim.keymap.set('n', '<leader>o', '<cmd>TypescriptOrganizeImports<cr>')
---vim.keymap.set('n', '<leader>a', '<cmd>TypescriptAddMissingImports<cr>')
+-- vim.keymap.set('n', '<leader>a', '<cmd>TypescriptAddMissingImports<cr>')
 --vim.keymap.set('n', '<leader>r', '<cmd>TypescriptRemoveUnused<cr>')
