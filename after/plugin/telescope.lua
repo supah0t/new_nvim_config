@@ -35,6 +35,7 @@ vim.keymap.set('n', '<leader>ff', Actual_find_files, {})
 vim.keymap.set('n', '<leader>fg', My_find_gitfiles, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true })
 vim.keymap.set('n', '<leader>fd', builtin.git_bcommits, { noremap = true })
+vim.keymap.set('n', '<leader>fq', builtin.quickfix, { noremap = true })
 vim.keymap.set('n', '<C-f>', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
