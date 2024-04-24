@@ -78,6 +78,9 @@ return require('packer').startup(function(use)
   -- harppoon
   use 'ThePrimeagen/harpoon'
 
+  -- DiffView
+  use "sindrets/diffview.nvim" 
+    
   use({
       "aaronhallaert/advanced-git-search.nvim",
       config = function()
