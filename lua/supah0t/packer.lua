@@ -13,8 +13,6 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use 'preservim/nerdtree'
   use 'Xuyuanp/nerdtree-git-plugin'
-  use 'ryanoasis/vim-devicons'
-  use 'nvim-tree/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
@@ -73,14 +71,21 @@ return require('packer').startup(function(use)
   use 'junegunn/gv.vim'
 
   -- trouble
-  use 'folke/trouble.nvim'
+  use { 'folke/trouble.nvim',
+    config = function () require('trouble').setup() end
+  }
 
   -- harppoon
   use 'ThePrimeagen/harpoon'
 
   -- DiffView
-  use "sindrets/diffview.nvim" 
-    
+  use 'sindrets/diffview.nvim'
+
+  -- Todo highlighter
+  use { 'folke/todo-comments.nvim',
+    config = function () require('todo-comments').setup() end
+  }
+
   use({
       "aaronhallaert/advanced-git-search.nvim",
       config = function()

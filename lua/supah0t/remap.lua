@@ -90,26 +90,11 @@ key.set('n', '<leader>gd', ':Gdiff<CR>')
 key.set('n', '<leader>cf', ':redir @* | echo @% | redir END<CR>')
 
 -- eslint --fix current file
-key.set('n', '<leader>ec', '!tmux new -d "eslint --fix %"', { noremap = true })
-vim.api.nvim_create_user_command('Formatd', '!tmux new -d "eslint --fix %"', {})
-vim.api.nvim_create_user_command('Format', '!eslint --fix %', {})
+-- key.set('n', '<leader>ec', '!tmux new -d "eslint --fix %"', { noremap = true })
+-- vim.api.nvim_create_user_command('Formatd', '!tmux new -d "eslint --fix %"', {})
+-- vim.api.nvim_create_user_command('Format', '!eslint --fix %', {})
 
 -- trouble
-key.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
-  { silent = true, noremap = true }
-)
-key.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
-  { silent = true, noremap = true }
-)
-key.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
-  { silent = true, noremap = true }
-)
-key.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
-  { silent = true, noremap = true }
-)
-key.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
-  { silent = true, noremap = true }
-)
-key.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+key.set("n", "<leader>xx", "<cmd>Trouble diagnostics<cr>",
   { silent = true, noremap = true }
 )

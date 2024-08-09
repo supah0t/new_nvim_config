@@ -4,6 +4,7 @@ require('mason-lspconfig').setup({
     'lua_ls',
     'tsserver',
     'graphql',
+    'tailwindcss'
   },
   automatic_installation = true
 })

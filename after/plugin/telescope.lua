@@ -44,6 +44,7 @@ vim.keymap.set('n', '<leader>fs', builtin.git_status, { noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<leader>fc', function()
   builtin.grep_string();
 end)
+vim.keymap.set('n', '<leader>ft', ':TodoTelescope<cr>', {})
 
 require('nvim-web-devicons').setup({
   override = {},
