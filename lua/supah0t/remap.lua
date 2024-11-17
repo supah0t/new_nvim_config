@@ -101,3 +101,6 @@ key.set('n', '<leader>cf', ':redir @* | echo @% | redir END<CR>')
 key.set("n", "<leader>xx", "<cmd>Trouble diagnostics<cr>",
   { silent = true, noremap = true }
 )
+
+-- replacer
+key.set('n', '<leader>r', ':lua require("replacer").run()<cr>', { silent = true })
