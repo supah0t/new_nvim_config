@@ -96,4 +96,5 @@ return require('packer').startup(function(use)
       },
   })
   use 'tpope/vim-rhubarb'
+  use 'gabrielpoca/replacer.nvim'
 end)

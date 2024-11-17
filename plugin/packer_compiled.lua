@@ -232,6 +232,11 @@ _G.packer_plugins = {
     path = "/home/supah0t/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["replacer.nvim"] = {
+    loaded = true,
+    path = "/home/supah0t/.local/share/nvim/site/pack/packer/start/replacer.nvim",
+    url = "https://github.com/gabrielpoca/replacer.nvim"
+  },
   ["telescope-live-grep-args.nvim"] = {
     loaded = true,
     path = "/home/supah0t/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",
@@ -303,30 +308,30 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\nS\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\19live_grep_args\19load_extension\14telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
--- Config for: kanagawa
-time([[Config for kanagawa]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
-time([[Config for kanagawa]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time([[Config for todo-comments.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: advanced-git-search.nvim
-time([[Config for advanced-git-search.nvim]], true)
-try_loadstring("\27LJ\2\nX\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\24advanced_git_search\19load_extension\14telescope\frequire\0", "config", "advanced-git-search.nvim")
-time([[Config for advanced-git-search.nvim]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
+-- Config for: kanagawa
+time([[Config for kanagawa]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa")
+time([[Config for kanagawa]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\2\nS\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\19live_grep_args\19load_extension\14telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
+-- Config for: advanced-git-search.nvim
+time([[Config for advanced-git-search.nvim]], true)
+try_loadstring("\27LJ\2\nX\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\24advanced_git_search\19load_extension\14telescope\frequire\0", "config", "advanced-git-search.nvim")
+time([[Config for advanced-git-search.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
