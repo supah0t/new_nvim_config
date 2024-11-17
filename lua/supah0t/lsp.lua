@@ -71,8 +71,8 @@ require('mason-lspconfig').setup_handlers({
       }
     }))
   end,
-  ['tsserver'] = function()
-    require('typescript').setup({
+  ['ts_ls'] = function()
+    require('lspconfig').ts_ls.setup({
       server = vim.tbl_extend('force', lsp_config, {
         on_attach = function(_, bufnr)
           on_attach(_, bufnr, true)
