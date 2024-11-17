@@ -104,3 +104,6 @@ key.set("n", "<leader>xx", "<cmd>Trouble diagnostics<cr>",
 
 -- replacer
 key.set('n', '<leader>r', ':lua require("replacer").run()<cr>', { silent = true })
+
+-- tstools
+key.set('n', '<leader>g', ':TSTools')
