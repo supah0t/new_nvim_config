@@ -26,7 +26,11 @@ return require('packer').startup(function(use)
     "pmizio/typescript-tools.nvim",
     requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     config = function()
-      require("typescript-tools").setup {}
+      require("typescript-tools").setup {
+        settings = {
+          separate_diagnostic_server = false,
+        }
+      }
     end,
   }
   use('MunifTanjim/prettier.nvim')
@@ -56,7 +60,6 @@ return require('packer').startup(function(use)
   use 'onsails/lspkind-nvim'
 
   use 'saadparwaiz1/cmp_luasnip'
-  use 'jose-elias-alvarez/null-ls.nvim'
   use 'L3MON4D3/LuaSnip'
   use 'windwp/nvim-ts-autotag'
   use 'vimwiki/vimwiki'

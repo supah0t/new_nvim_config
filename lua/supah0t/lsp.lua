@@ -71,21 +71,21 @@ require('mason-lspconfig').setup_handlers({
       }
     }))
   end,
-  ['ts_ls'] = function()
-    require('lspconfig').ts_ls.setup({
-      server = vim.tbl_extend('force', lsp_config, {
-        on_attach = function(_, bufnr)
-          on_attach(_, bufnr, true)
-        end,
-        init_options = {
-          preferences = {
-            importModuleSpecifierPreference = 'project=relative',
-            jsxAttributeCompletionStyle = 'none'
-          }
-        }
-      })
-    })
-  end,
+  -- ['ts_ls'] = function()
+    -- require('lspconfig').ts_ls.setup({
+      -- server = vim.tbl_extend('force', lsp_config, {
+        -- on_attach = function(_, bufnr)
+          -- on_attach(_, bufnr, true)
+        -- end,
+        -- init_options = {
+          -- preferences = {
+            -- importModuleSpecifierPreference = 'project=relative',
+            -- jsxAttributeCompletionStyle = 'none'
+          -- }
+        -- }
+      -- })
+    -- })
+  -- end,
   ["cssls"] = function ()
         require("lspconfig").cssls.setup(vim.tbl_deep_extend('force', lsp_config, {
             capabilities = {
