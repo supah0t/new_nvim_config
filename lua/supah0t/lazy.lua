@@ -38,14 +38,8 @@ return require('lazy').setup({
     'neovim/nvim-lspconfig',
   {
     "pmizio/typescript-tools.nvim",
-    requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    config = function()
-      require("typescript-tools").setup {
-        settings = {
-          separate_diagnostic_server = false,
-        }
-      }
-    end,
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
   },
   'MunifTanjim/prettier.nvim',
 {
@@ -79,7 +73,8 @@ return require('lazy').setup({
  'tpope/vim-repeat',
  { "nvim-tree/nvim-web-devicons", opts = {} },
 
-'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/cmp-nvim-lsp',
+  'esmuellert/nvim-eslint',
   'hrsh7th/cmp-buffer',
    'hrsh7th/cmp-path',
    'hrsh7th/cmp-cmdline',

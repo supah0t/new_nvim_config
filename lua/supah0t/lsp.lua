@@ -71,21 +71,6 @@ require('mason-lspconfig').setup_handlers({
       }
     }))
   end,
-  -- ['ts_ls'] = function()
-    -- require('lspconfig').ts_ls.setup({
-      -- server = vim.tbl_extend('force', lsp_config, {
-        -- on_attach = function(_, bufnr)
-          -- on_attach(_, bufnr, true)
-        -- end,
-        -- init_options = {
-          -- preferences = {
-            -- importModuleSpecifierPreference = 'project=relative',
-            -- jsxAttributeCompletionStyle = 'none'
-          -- }
-        -- }
-      -- })
-    -- })
-  -- end,
   ["cssls"] = function ()
         require("lspconfig").cssls.setup(vim.tbl_deep_extend('force', lsp_config, {
             capabilities = {
@@ -99,6 +84,5 @@ require('mason-lspconfig').setup_handlers({
     end,
 })
 
---vim.keymap.set('n', '<leader>o', '<cmd>TypescriptOrganizeImports<cr>')
--- vim.keymap.set('n', '<leader>a', '<cmd>TypescriptAddMissingImports<cr>')
---vim.keymap.set('n', '<leader>r', '<cmd>TypescriptRemoveUnused<cr>')
+-- eslint plugin
+require('nvim-eslint').setup({})
