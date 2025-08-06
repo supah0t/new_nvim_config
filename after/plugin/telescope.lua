@@ -39,6 +39,15 @@ vim.keymap.set('n', '<leader>fq', builtin.quickfix, { noremap = true })
 vim.keymap.set('n', '<C-f>', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
+vim.keymap.set('n', '<C-g>', function()
+  builtin.grep_string({
+    search = vim.fn.input("Grep all > "),
+    additional_args = function()
+      return { "--no-ignore" }
+    end,
+  })
+end)
+
 vim.keymap.set('n', '<leader>fs', builtin.git_status, { noremap = true })
 
 vim.keymap.set({ 'n', 'v' }, '<leader>fc', function()

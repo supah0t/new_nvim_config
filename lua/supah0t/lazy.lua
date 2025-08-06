@@ -26,6 +26,7 @@ return require('lazy').setup({
       vim.cmd('colorscheme kanagawa')
     end
   },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 'nvim-treesitter/nvim-treesitter',
 'preservim/nerdtree',
 'Xuyuanp/nerdtree-git-plugin',
@@ -33,19 +34,12 @@ return require('lazy').setup({
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' }
   },
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig',
-  {
-    "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    opts = {},
-  },
+  'neovim/nvim-lspconfig',
   'MunifTanjim/prettier.nvim',
 {
   "nvim-telescope/telescope.nvim",
   dependencies = {
-    { 
+    {
         "nvim-telescope/telescope-live-grep-args.nvim" ,
         -- This will not install any breaking changes.
         -- For major updates, this must be adjusted manually.
@@ -95,6 +89,7 @@ return require('lazy').setup({
 
   -- git blamer
 'APZelos/blamer.nvim',
+'sbdchd/neoformat',
 
   -- fugitive
 'tpope/vim-fugitive',
@@ -104,6 +99,10 @@ return require('lazy').setup({
   -- trouble
 { 'folke/trouble.nvim',
     config = function () require('trouble').setup() end
+  },
+  -- autoclose tag
+  { 'windwp/nvim-ts-autotag',
+    config = function() require('nvim-ts-autotag').setup {} end
   },
 
   -- harppoon

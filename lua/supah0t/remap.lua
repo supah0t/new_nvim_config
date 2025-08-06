@@ -53,6 +53,15 @@ key.set('n', '<leader>et', ':tabe <C-R>=expand("%:p:h") . "/" <CR>')
 key.set('n', '<leader>ev', ':vsplit <C-R>=expand("%:p:h") . "/" <CR>')
 key.set('n', '<leader>es', ':split <C-R>=expand("%:p:h") . "/" <CR>')
 
+vim.keymap.set("n", "<leader>en", function()
+  vim.cmd("rightbelow vsplit")
+  vim.cmd("enew")
+  vim.bo.buftype = "nofile"
+end, { desc = "Open empty nofile buffer in vertical split to the right" })
+
+-- exit vim terminal
+key.set('t', '<C-u>', [[<C-\><C-n>]], { noremap = true })
+
 key.set({ 'n', 'v' }, 'j', 'gj')
 key.set({ 'n', 'v' }, 'k', 'gk')
 
@@ -67,7 +76,7 @@ key.set('n', ']d', vim.diagnostic.goto_next)
 key.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- faster resize
-key.set('n', '<leader>+', ':vertical resize +10<cr>', { noremap = true })
+key.set('n', '<leader>=', ':vertical resize +10<cr>', { noremap = true })
 key.set('n', '<leader>-', ':vertical resize -10<cr>', { noremap = true })
 
 -- undotree
@@ -105,5 +114,5 @@ key.set("n", "<leader>xx", "<cmd>Trouble diagnostics<cr>",
 -- replacer
 key.set('n', '<leader>r', ':lua require("replacer").run()<cr>', { silent = true })
 
--- tstools
-key.set('n', '<leader>g', ':TSTools')
+-- vimwiki
+key.set('n',  '<leader>j', ':VimwikiToggleListItem<CR>')
